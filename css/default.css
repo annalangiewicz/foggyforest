@@ -1,0 +1,792 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+.main,
+.container > header {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 1.875em 3.125em 1.875em;
+}
+
+.container > header {
+	padding: 2.875em 1.875em 1.875em;
+}
+
+.container > header h1 {
+	font-size: 2.125em;
+	line-height: 1.3;
+	margin: 0;
+	float: left;
+	font-weight: 400;
+}
+
+.container > header span {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	padding: 0 0 0.6em 0.1em;
+}
+
+.container > header nav {
+	float: right;
+}
+
+.container > header nav a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 2.5em;
+	height: 2.5em;
+	background: #fff;
+	border-radius: 50%;
+	color: transparent;
+	margin: 0 0.1em;
+	border: 4px solid #47a3da;
+	text-indent: -8000px;
+}
+
+.container > header nav a:after {
+	content: attr(data-info);
+	color: #47a3da;
+	position: absolute;
+	width: 600%;
+	top: 120%;
+	text-align: right;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.container > header nav a:hover:after {
+	opacity: 1;
+}
+
+.container > header nav a:hover {
+	background: #47a3da;
+}
+
+.main > section {
+	max-width: 260px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.main > section h2 {
+	font-weight: 300;
+	color: #ccc;
+}
+
+.main > section button h1 {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 3em;
+	margin-bottom: 0;
+}
+
+.main > section button p {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 1.6em;
+	margin-top: 0;
+}
+
+.main > section button {
+	border: 2px;
+	border-color: #fff;
+	border-style: solid;
+	background: transparent;
+	color: #fff;
+	padding: 1.5em;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	margin: 170% 0 0 0;
+	font-size: 0.8em;
+}
+
+.main > section button:hover {
+	background: rgba(255, 255, 255, 0.31);
+	color: #42424C;
+	transition-duration: .8s;
+}
+
+.main > section button.disabled {
+	background: #aaa;
+	pointer-events: none;
+}
+
+.icon-drop:before, 
+.icon-arrow-left:before {
+	font-family: 'fontawesome';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #47a3da;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+	padding-left: 8px;
+}
+
+.container > header nav a:hover:before {
+	color: #fff;
+}
+
+.icon-drop:before {
+	content: "\e000";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}
+
+body{
+    background: url("../background.jpg") no-repeat center center fixed;
+}
+
+#sth{
+	margin: 10% 10% 40% 35%;
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-weight: 400;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	max-width: 500px;
+	position: fixed;
+	box-sizing: border-box;
+}
+
+
+.border-config{
+	border: 3px;
+	border-color: #fff;
+	border-style: solid;
+	padding: 15px;
+}
+
+.team-img {
+	border-radius: 50%;
+	height: 150px;
+	margin: 10px;
+	}
+
+.team-all{
+	margin-left: 400px;
+    margin-top: 200px;
+}
+
+.tlist{
+	padding: 0.75em;
+	display: block;
+}
+
+.tlist img{
+	/*display: block;*/
+	vertical-align: middle;
+}
+
+.tlist h3{
+	vertical-align: middle;
+	display: inline-block;
+	word-spacing: -0.15em;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.tlist h3 span{
+	font-weight: 800;
+}
+
+
+/* Common style */
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 230px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+figure.effect-julia {
+	background: #2f3238;
+	border: 4px;
+	border-color: #fff;
+}
+
+figure.effect-julia img {
+	max-width: none;
+	height: 400px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+	text-align: left;
+}
+
+figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: #2f3238;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+
+
+
+
+
+
+/*-----------style categories content-----------------------*/
+.catcont {
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.catcont figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 680px;
+	max-height: 830px;
+	width: 100%;
+	height: auto;
+	width: auto;
+	background: transparent;
+	text-align: center;
+	cursor: pointer;
+}
+
+.catcont figure img {
+	position: relative;
+	display: block;
+	min-height: 200%;
+	max-width: 200%;
+	opacity: 0.1;
+}
+
+.catcont figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.catcont figure figcaption::before,
+.catcont figure figcaption::after {
+	pointer-events: none;
+}
+
+.catcont figure figcaption,
+.catcont figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.catcont figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.catcont figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.catcont figure h2 span {
+	font-weight: 800;
+}
+
+.catcont figure h2,
+.catcont figure p {
+	margin: 0;
+}
+
+.catcont figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+.catcont figure.effect-julia {
+	background: transparent;
+	border: 4px;
+	border-color: #fff;
+}
+
+.catcont figure.effect-julia img {
+	max-width: none;
+	height: 700px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.catcont figure.effect-julia figcaption {
+	text-align: left;
+}
+
+.catcont figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+}
+
+.catcont figure.effect-julia p {
+	display: table;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: #2f3238;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 1s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-760px,0,0);
+}
+
+
+/*Hiding effect*/
+
+.catcont figure.effect-julia p:nth-of-type(14) {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(13) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(12) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(11) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(10) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(9) {
+	-webkit-transition-delay: 0.25s;
+	transition-delay: 0.25s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(8) {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(7) {
+	-webkit-transition-delay: 0.35s;
+	transition-delay: 0.35s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(6) {
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(5) {
+	-webkit-transition-delay: 0.45s;
+	transition-delay: 0.45s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(4) {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.55s;
+	transition-delay: 0.55s;
+}
+
+.catcont figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+
+.catcont figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.65s;
+	transition-delay: 0.65s;
+}
+
+
+/*Revealing effect*/
+
+.catcont figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(4) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(5) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(6) {
+	-webkit-transition-delay: 0.25s;
+	transition-delay: 0.25s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(7) {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(8) {
+	-webkit-transition-delay: 0.35s;
+	transition-delay: 0.35s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(9) {
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(10) {
+	-webkit-transition-delay: 0.45s;
+	transition-delay: 0.45s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(11) {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(12) {
+	-webkit-transition-delay: 0.55s;
+	transition-delay: 0.55s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(13) {
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+
+.catcont figure.effect-julia:hover p:nth-of-type(14) {
+	-webkit-transition-delay: 0.65s;
+	transition-delay: 0.65s;
+}
+
+.catcont figure.effect-julia:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+.catcont figure.effect-julia:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+/*Contact*/
+
+.cont{
+	color: #fff;
+	display: inline-block;
+	margin-top: 20%;
+  	/*left: 50%;
+  	transform: translate(-50%, -50%);*/
+	clear: both;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+/*Links*/
+
+.link ul {
+    overflow: auto;
+    display: inline-block;
+    position: fixed;
+  	top: 40%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+ 
+.link ul li {
+    list-style-type: none;
+    float: left;
+}
+ 
+.link ul li a i {
+    background: #dd4b39;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+.link .fa-facebook {
+    background:#3b5998;
+} 
+.link .fa-linkedin {
+    background:#007bb6;
+}
+.link .fa-twitter {
+    background:#00aced;
+}
+.link .google-plus {
+    background:#dd4b39;
+}
+.link ul li a i:hover {
+    opacity: .7;
+}
