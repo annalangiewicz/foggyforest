@@ -63,6 +63,7 @@
 .cbp-spmenu-vertical p {
 	border-bottom: 1px solid #555D63;
 	padding: 1em;
+	cursor: pointer;
 }
 
 .cbp-spmenu-horizontal {
